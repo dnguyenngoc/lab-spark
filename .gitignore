@@ -1,0 +1,19 @@
+# Python
+__pycache__
+.ipynb_checkpoints
+
+# Share Storage
+!share_storages/lab
+!share_storages/data
+
+# Jupyterlab
+jupyterlab/config/lab/*
+jupyterlab/config/migrated
+
+# Airflow
+airflow-webserver.pid
+airflow.db
+airflow/app/logs/*
+!airflow/app/logs/.gitkeep
+
+

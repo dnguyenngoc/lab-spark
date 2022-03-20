@@ -1,0 +1,9 @@
+tensorflow==2.8.0
+kafka_python==2.0.2
+pyspark==3.2.1
+opencv-python==4.5.5.64
+hdfs==2.6.0
+pandas==1.4.1
+pillow==9.0.1
+pyarrow==7.0.0
+scikit-learn==1.0.2

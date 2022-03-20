@@ -1,0 +1,1 @@
+c.NotebookApp.notebook_dir = '/usr/local/share_storages'

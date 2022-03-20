@@ -1,0 +1,74 @@
+  
+version: '3.8'
+services: 
+
+  jupyterlab:
+    image: duynguyenngoc/hadoop-jupyterlab:3.3.2
+    container_name: jupyterlab
+    restart: unless-stopped
+    volumes:
+      - ./share_storages:/usr/local/share_storages
+      - ./jupyterlab/config/:/root/.jupyter/
+    ports:
+      - 8888:8888
+    command: bash -c "jupyter-lab --ip 0.0.0.0 --allow-root --paths /root/.jupyter/jupyter_lab_config.py"
+    networks:
+      - bigdatanet 
+
+  spark-master:
+    image: duynguyenngoc/hadoop-spark:3.3.2
+    container_name: spark-master
+    restart: unless-stopped
+    volumes:
+      - ./share_storages:/usr/local/share_storages
+    environment:
+      - SPARK_LOCAL_IP=spark-master
+      - SPARK_WORKLOAD=master
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+    networks:
+     - bigdatanet
+    
+  spark-worker-a:
+    image: duynguyenngoc/hadoop-spark:3.3.2
+    container_name: spark-worker-a
+    restart: unless-stopped
+    volumes:
+      - ./share_storages:/usr/local/share_storages
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+      - SPARK_WORKER_CORES=1
+      - SPARK_WORKER_MEMORY=2G
+      - SPARK_DRIVER_MEMORY=2G
+      - SPARK_EXECUTOR_MEMORY=2G
+      - SPARK_WORKLOAD=worker
+      - SPARK_LOCAL_IP=spark-worker-a
+    ports:
+      - "8081:8080"
+      - "7001:7000"
+    networks:
+      - bigdatanet
+  
+  spark-worker-b:
+    image: duynguyenngoc/hadoop-spark:3.3.2
+    container_name: spark-worker-b
+    restart: unless-stopped
+    volumes:
+      - ./share_storages:/usr/local/share_storages
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+      - SPARK_WORKER_CORES=1
+      - SPARK_WORKER_MEMORY=2G
+      - SPARK_DRIVER_MEMORY=2G
+      - SPARK_EXECUTOR_MEMORY=2G
+      - SPARK_WORKLOAD=worker
+      - SPARK_LOCAL_IP=spark-worker-b
+    ports:
+      - "8082:8080"
+      - "7002:7000"
+    networks:
+      - bigdatanet
+
+networks:
+  bigdatanet:    
