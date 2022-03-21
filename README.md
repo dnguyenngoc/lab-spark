@@ -13,6 +13,10 @@ This project sharing Notebook on AI, Bigdata, Realtime analytic, Monitoring ... 
 ...
 ```
 
+## Posts and Notebooks
+
+- 1. [Spark Distributed ML model with Pandas UDFs.ipynb](https://viblo.asia/p/spark-distributed-ml-model-with-pandas-udfs-maGK7rWe5j2)
+
 ## Start Lab
 
 ### 1. Clone repo
