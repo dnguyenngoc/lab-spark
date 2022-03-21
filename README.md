@@ -32,7 +32,7 @@ docker-compose -f <docker-compose file .yaml> up
 | :-------------------: | :------------------------------: | :----------: |
 | Jupyterlab            | http://localhost:8888            | 1q2w3e4r     |
 
-![Test](public/test.png)
+![Test](public/image.gif)
 
 
 ## Contact Us
