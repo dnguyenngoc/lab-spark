@@ -16,7 +16,7 @@ This project sharing Notebook on AI, Bigdata, Realtime analytic, Monitoring ... 
 ## Posts and Notebooks
 **Note:** Corresponding to each article is a Notebook of the same name in the path ```share_storages/lab```
 
-#### 1. [Spark Distributed ML model with Pandas UDFs.ipynb](https://viblo.asia/p/spark-distributed-ml-model-with-pandas-udfs-maGK7rWe5j2)
+#### 1. **Blogs** [Spark Distributed ML model with Pandas UDFs](https://viblo.asia/p/spark-distributed-ml-model-with-pandas-udfs-maGK7rWe5j2) - [Notebook](share_storage/lab/Distributed ML model with Pandas UDFs.ipynb)
 
 ## Start Lab
 
