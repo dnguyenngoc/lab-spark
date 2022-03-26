@@ -1,0 +1,19 @@
+  
+version: '3.8'
+services: 
+
+  jupyterlab:
+    image: duynguyenngoc/hadoop-jupyterlab:3.3.2
+    container_name: jupyterlab
+    restart: unless-stopped
+    volumes:
+      - ./share_storages:/usr/local/share_storages
+      - ./jupyterlab/config/:/root/.jupyter/
+    ports:
+      - 8888:8888
+    command: bash -c "jupyter-lab --ip 0.0.0.0 --allow-root --paths /root/.jupyter/jupyter_lab_config.py"
+    networks:
+      - bigdatanet 
+
+networks:
+  bigdatanet:    
