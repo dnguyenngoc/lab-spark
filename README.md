@@ -7,6 +7,9 @@ This project sharing Notebook on AI, Bigdata, Realtime analytic, Monitoring ... 
 ├── share_storages
     ├── lab -> All notebook
     ├── data -> public data like image, ai-model, csv ..
+        ├── dataset
+            ├── dogs-vs-cats
+            ...
         ├── image
         ├── model
 ├── docker-compose.yaml -> run server

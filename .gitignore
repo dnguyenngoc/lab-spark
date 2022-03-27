@@ -5,6 +5,14 @@ __pycache__
 # Share Storage
 !share_storages/lab
 !share_storages/data
+share_storages/data/dataset/*
+!share_storages/data/dataset/.gitkeep
+
+share_storages/data/model/cat-dog
+share_storages/data/model/cat-dog.h5
+
+
+
 
 # Jupyterlab
 jupyterlab/config/lab/*
